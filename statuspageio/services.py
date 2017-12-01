@@ -37,7 +37,7 @@ class PageService(object):
         :return: Dictionary that support attriubte-style access and represents updated Component resource.
         :rtype: dict
         """
-        _, _, page = self.http_client.get('/pages/{page_id}.json'.format(self.page_id))
+        _, _, page = self.http_client.get('/pages/{page_id}.json'.format(page_id=self.page_id))
 
         return page
 
@@ -87,7 +87,7 @@ class PageService(object):
         attributes = dict((k, v) for k, v in kwargs.iteritems()
                           if k in OPTS_KEYS_TO_PERSIST)
 
-        page = self.http_client.patch('/pages/{page_id}.json'.format(self.page_id),
+        page = self.http_client.patch('/pages/{page_id}.json'.format(page_id=self.page_id),
                                       container=self.container,
                                       body=attributes)
 
