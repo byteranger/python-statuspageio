@@ -284,7 +284,8 @@ class IncidentsService(object):
             'message',
             'wants_twitter_update',
             'impact_override',
-            'component_ids']
+            'component_ids',
+            'deliver_notifications']
 
         if not kwargs:
             raise Exception('attributes are missing')
@@ -319,7 +320,8 @@ class IncidentsService(object):
             'scheduled_auto_in_progress',
             'scheduled_auto_completed',
             'impact_override',
-            'component_ids']
+            'component_ids',
+            'deliver_notifications']
         if not kwargs:
             raise Exception('attributes are missing')
 
@@ -367,7 +369,8 @@ class IncidentsService(object):
             'message',
             'wants_twitter_update',
             'impact_override',
-            'component_ids']
+            'component_ids',
+            'deliver_notifications']
 
         if not kwargs:
             raise Exception('attributes for Contact are missing')
