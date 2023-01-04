@@ -369,7 +369,9 @@ class IncidentsService(object):
             'message',
             'wants_twitter_update',
             'impact_override',
-            'component_ids']
+            'deliver_notifications',
+            'component_ids',
+        ]
 
         if not kwargs:
             raise Exception('attributes for Contact are missing')
