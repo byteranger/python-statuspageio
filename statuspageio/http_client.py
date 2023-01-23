@@ -92,7 +92,6 @@ class HttpClient(object):
         return self.request('delete', url, params=params, **kwargs)
 
     def request(self, method, url, params=None, body=None, **kwargs):
-        print method, url, params, body, kwargs
         """
         Send an HTTP request.
 
